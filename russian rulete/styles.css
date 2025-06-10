@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #d4af37;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.round-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.game-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.player-section, .dealer-section {
+    width: 30%;
+    background-color: #252525;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.middle-section {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #d4af37;
+    text-align: center;
+}
+
+.health-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.health-fill {
+    height: 100%;
+    width: 100%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+.stats {
+    margin: 15px 0;
+}
+
+.stats p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.upgrades {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #444;
+}
+
+.upgrade {
+    background-color: #333;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.revolver {
+    width: 200px;
+    height: 150px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.cylinder {
+    width: 100px;
+    height: 100px;
+    background-color: #555;
+    border-radius: 50%;
+    position: absolute;
+    left: 50px;
+    top: 25px;
+    box-shadow: inset 0 0 10px #000;
+}
+
+.barrel {
+    width: 150px;
+    height: 20px;
+    background-color: #444;
+    position: absolute;
+    top: 65px;
+    left: 100px;
+    border-radius: 0 10px 10px 0;
+}
+
+.trigger {
+    width: 30px;
+    height: 20px;
+    background-color: #666;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    border-radius: 5px;
+}
+
+.btn-shoot {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-shoot:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+.message-box {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 60px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+}
+
+.shop {
+    background-color: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #444;
+}
+
+.shop h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #d4af37;
+}
+
+.shop-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.shop-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.shop-item h4 {
+    color: #d4af37;
+    margin-bottom: 5px;
+}
+
+.btn-buy {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #45a049;
+}
+
+.btn-continue {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s;
+}
+
+.btn-continue:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+.game-over {
+    background-color: #252525;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #444;
+}
+
+.game-over h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.btn-restart {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.btn-restart:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Анимации */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.spin {
+    animation: spin 0.5s linear;
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+.shot {
+    position: relative;
+}
+
+.shot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, rgba(255,200,0,1) 0%, rgba(255,100,0,1) 100%);
+    transform: translateY(-50%);
+    z-index: 10;
+}
